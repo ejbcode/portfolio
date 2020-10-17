@@ -38,7 +38,6 @@ const GlobalStyle = createGlobalStyle`${css`
     font-size: 1.6rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
   }
   ul {
     list-style: none;
@@ -73,9 +72,22 @@ const GlobalStyle = createGlobalStyle`${css`
   .section-container {
     padding-top: 80px;
     padding-bottom: 80px;
-    width: 70%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .section-title {
+  }
+
+  .section-title:before {
+    content: '< ';
+    color: var(--colorTxt2);
+  }
+
+  .section-title:after {
+    content: ' /> ';
+    color: var(--colorTxt2);
   }
 
   .gatsby-image-wrapper img[src*='base64\\,'] {
@@ -89,13 +101,13 @@ const GlobalStyle = createGlobalStyle`${css`
   }
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--red) var(--white);
+    scrollbar-color: var(--yellow) var(--white);
   }
   body::-webkit-scrollbar-track {
     background: var(--white);
   }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--red);
+    background-color: var(--yellow);
     border-radius: 6px;
     border: 3px solid var(--white);
   }

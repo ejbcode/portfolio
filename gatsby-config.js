@@ -33,7 +33,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Fira Code`,
+            family: `Caveat`,
             variants: [`400`],
           },
           {

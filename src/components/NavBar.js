@@ -19,6 +19,7 @@ const Nav = styled.nav`
     color: var(--colorTxt);
     font-size: 2.5rem;
     letter-spacing: 0.2rem;
+    font-weight: 700;
   }
 
   span {

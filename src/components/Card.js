@@ -2,24 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CardStyle = styled.div`
-  margin: 0 auto;
+  margin: 2rem auto;
 
-  code {
-    font-size: 2.7rem;
-  }
-
-  .card {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-  }
   .card-front {
+    position: relative;
+    min-width: 300px;
+    max-width: 610px;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     margin: 0 auto;
     border-radius: 5px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
@@ -27,127 +20,128 @@ const CardStyle = styled.div`
     background: linear-gradient(45deg, #101010, #2c3e50);
   }
 
-  .card .line-numbers {
+  code {
+    font-size: 1.5rem;
+    width: 90%;
+    margin-left: 0;
+  }
+  .line-numbers {
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100%;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 0.5rem;
     background-color: rgba(255, 255, 255, 0.03);
     font-size: 1.3rem;
   }
-  .card .line-numbers > div {
+  .line-numbers > div {
     padding: 2.5px 0;
     opacity: 0.25;
     color: whitesmoke;
   }
 
-  .card .indent {
-    padding-left: 4.5rem;
+  .indent {
+    padding-left: 2.5rem;
   }
-  .card .operator {
+  .operator {
     color: #4dd0e1;
   }
-  .card .string {
+  .string {
     color: #9ccc65;
   }
-  .card .variable {
+  .variable {
     color: #ba68c8;
   }
-  .card .property {
+  .property {
     color: #ef5350;
   }
-  .card .method {
+  .method {
     color: #29b6f6;
   }
-  .card .function {
+  .function {
     color: #fdd835;
   }
-  .card .boolean {
+  .boolean {
     color: #4dd0e1;
   }
+
+  @media (min-width: 768px) {
+    code {
+      font-size: 2rem;
+    }
+  } ;
 `;
 
 const Card = () => (
   <CardStyle>
-    <div className="card">
-      <div className="card-front">
-        <div className="line-numbers">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>7</div>
-          <div>8</div>
-          <div>9</div>
-        </div>
-        <code>
-          <span className="variable">const </span>
-          <span className="function">aboutMe </span>
-          <span className="operator"> = </span>
-          &#123; <span />
-          <div className="indent">
-            {' '}
-            <span className="property">name</span>
-            <span className="operator">:</span>
-            <span className="string">'Ernesto Briceño'</span>
-            <span>,</span>
-          </div>
-          <div className="indent">
-            {' '}
-            <span className="property">title</span>
-            <span className="operator">:</span>
-            <span className="string">'Front end Developer'</span>
-            <span>,</span>
-          </div>
-          <div className="indent">
-            {' '}
-            <span className="property">contact</span>
-            <span className="operator">:</span>
-            <span />
-            <div className="indent">
-              {' '}
-              <span className="property">email</span>
-              <span className="operator">:</span>
-              <span className="string">'ejbcode@gmail.com'</span>
-              <span>,</span>
-            </div>
-            <div className="indent">
-              <span className="property">website</span>
-              <span className="operator">:</span>
-              <span className="string">'ejbcode.com'</span>
-            </div>
-            <span>&#125;</span>
-          </div>
-          <div className="indent">
-            {' '}
-            <span className="property">contact</span>
-            <span className="operator">:</span>
-            <span />
-            <div className="indent">
-              {' '}
-              <span className="property">email</span>
-              <span className="operator">:</span>
-              <span className="string">'ejbcode@gmail.com'</span>
-              <span>,</span>
-            </div>
-            <div className="indent">
-              <span className="property">website</span>
-              <span className="operator">:</span>
-              <span className="string">'ejbcode.com'</span>
-            </div>
-            <span>&#125;</span>
-          </div>
-          <span> &#125; &#091;&#093;</span>
-        </code>
+    <div className="card-front">
+      <div className="line-numbers">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
       </div>
+      <code>
+        <span className="variable">const </span>
+        <span className="function">aboutMe </span>
+        <span className="operator"> = </span>
+        &#123; <span />
+        <div className="indent">
+          <span className="property">name</span>
+          <span className="operator">:</span>
+          <span className="string">'Ernesto Briceño'</span>
+          <span>,</span>
+        </div>
+        <div className="indent">
+          <span className="property">title</span>
+          <span className="operator">:</span>
+          <span className="string">'Frontend Developer'</span>
+          <span>,</span>
+        </div>
+        <div className="indent">
+          <span className="property">skills</span>
+          <span className="operator">:</span>
+          <span> &#091; </span>
+          <div className="indent">
+            <span className="string">
+              'HTML/CSS/JS', 'React', 'Gatsby', 'GraphQl', 'APIRest','Node.js',
+              'Redux', 'Styled-components', '@emotion', 'Bootstrap',
+              'GIT/GitHub'
+            </span>
+          </div>
+          <span>&#093;</span>
+        </div>
+        <div className="indent">
+          <span className="property">contact</span>
+          <span className="operator">:</span>
+          <span> &#123;</span>
+          <div className="indent">
+            <span className="property">email</span>
+            <span className="operator">:</span>
+            <span className="string">'ejbcode@gmail.com'</span>
+            <span>,</span>
+          </div>
+          <div className="indent">
+            <span className="property">website</span>
+            <span className="operator">:</span>
+            <span className="string">'ejbcode.com'</span>
+          </div>
+          <span>&#125;</span>
+        </div>
+        <span> &#125;</span>
+      </code>
     </div>
   </CardStyle>
 );
