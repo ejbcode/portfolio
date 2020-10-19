@@ -5,6 +5,7 @@ const CardStyle = styled.div`
   margin: 2rem auto;
 
   .card-front {
+    padding: 1rem 0;
     position: relative;
     min-width: 300px;
     max-width: 610px;
@@ -35,7 +36,7 @@ const CardStyle = styled.div`
     justify-content: space-between;
     height: 100%;
     margin: 0;
-    padding: 0 0.5rem;
+    padding: 1rem 0.5rem;
     background-color: rgba(255, 255, 255, 0.03);
     font-size: 1.3rem;
   }

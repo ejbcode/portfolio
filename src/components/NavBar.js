@@ -25,6 +25,27 @@ const Nav = styled.nav`
   span {
     color: var(--colorTxt2);
   }
+
+  .header-module--cursor--33Aoa {
+    display: inline-block;
+    margin-left: 0.3rem;
+    width: 1rem;
+    height: 2rem;
+    background: var(--colorTxt2);
+    animation: header-cursor 1s infinite;
+  }
+
+  @keyframes header-cursor {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 `;
 
 const Navbar = ({ siteTitle }) => (
@@ -34,6 +55,7 @@ const Navbar = ({ siteTitle }) => (
         {' '}
         <span>&lt; </span>
         ejb<span>code /&gt;</span>
+        <span className="header-module--cursor--33Aoa" />
       </div>
     </Link>
     <Burger />
