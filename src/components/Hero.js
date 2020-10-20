@@ -2,10 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeroStyle = styled.section`
-  height: 70vh;
+  height: calc(100vh - 55px);
+  max-height: 850px;
   display: flex;
   align-items: center;
   line-height: 4rem;
+  border: red solid 1px;
 
   legend {
     font-size: 1.6rem;
