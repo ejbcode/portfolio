@@ -2,21 +2,30 @@ import React from 'react';
 import Img from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
+const ProjectsStyle = styled.section`
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+`;
 const ProjectStyle = styled.article`
-  .project-item {
-    border: green 3px dashed;
+  h3 {
+    font-size: 2.8rem;
+    font-weight: 400;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
   }
 
   .project-description {
-    border: blue 3px dashed;
     margin: 10px;
     ul {
       display: flex;
       flex-wrap: wrap;
-      justify-content: start;
       li {
-        font-weight: 400;
         background-color: var(--colorTxt2);
         padding: 5px 8px;
         margin-bottom: 8px;
@@ -25,7 +34,6 @@ const ProjectStyle = styled.article`
     }
 
     .project-links {
-      margin: 15px 0;
     }
 
     .project-links a:first-child {
@@ -34,25 +42,32 @@ const ProjectStyle = styled.article`
   }
 
   :nth-child(even) {
-    background: red;
+    flex-direction: row-reverse;
+    .project-img {
+    }
+    .project-img img {
+    }
   }
   :nth-child(odd) {
-    background: pink;
+    .project-img {
+    }
+  }
+  @media (min-width: 768px) {
   }
 `;
 
 const Projects = ({ projects }) => {
   console.log(projects.nodes);
   return (
-    <div>
+    <ProjectsStyle>
       <p>projects</p>
       {projects.nodes.map((project, i) => (
-        <ProjectStyle className="portfolio_item" key={i}>
+        <ProjectStyle key={i}>
           <div className="project-item">
             <Img fluid={project.frontmatter.image.childImageSharp.fluid} />
           </div>
           <div className="project-description">
-            <h2> {project.frontmatter.title}</h2>
+            <h3> {project.frontmatter.title}</h3>
             <MDXRenderer>{project.body}</MDXRenderer>
 
             <ul>
@@ -66,6 +81,7 @@ const Projects = ({ projects }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <FaExternalLinkAlt />
                 Live Demo
               </a>
               <a
@@ -73,13 +89,13 @@ const Projects = ({ projects }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Repository
+                <FaGithub /> Repository
               </a>
             </div>
           </div>
         </ProjectStyle>
       ))}
-    </div>
+    </ProjectsStyle>
   );
 };
 
