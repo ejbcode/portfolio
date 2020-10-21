@@ -4,11 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
-const ProjectsStyle = styled.section`
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 10rem;
-`;
+const ProjectsStyle = styled.section``;
 const ProjectStyle = styled.article`
   display: flex;
   flex-wrap: wrap;
@@ -67,21 +63,13 @@ const ProjectStyle = styled.article`
     .project-img {
     }
   }
+
   @media (min-width: 768px) {
     .project-item {
-      width: 40%;
+      width: 35%;
     }
     .project-description {
-      width: calc(60% - 20px);
-    }
-  }
-
-  @media (min-width: 980px) {
-    .project-item {
-      width: 50%;
-    }
-    .project-description {
-      width: calc(50% - 20px);
+      width: calc(65% - 20px);
     }
   }
 `;
@@ -89,8 +77,8 @@ const ProjectStyle = styled.article`
 const Projects = ({ projects }) => {
   console.log(projects.nodes);
   return (
-    <ProjectsStyle>
-      <p>projects</p>
+    <div className="section-container ">
+      <h2 className="section-title">Projects</h2>
       {projects.nodes.map((project, i) => (
         <ProjectStyle key={i}>
           <div className="project-item">
@@ -125,7 +113,7 @@ const Projects = ({ projects }) => {
           </div>
         </ProjectStyle>
       ))}
-    </ProjectsStyle>
+    </div>
   );
 };
 

@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`${css`
   html {
     font-size: 62.5%;
     background: var(--colorBg);
+
     /* font-family: 'Chilanka', cursive; */
     /* font-family: 'Fira Code', monospace; */
     scroll-behavior: smooth;
@@ -37,6 +38,7 @@ const GlobalStyle = createGlobalStyle`${css`
     line-height: 1.5;
     font-size: 1.6rem;
     max-width: 1200px;
+    width: 95%;
     margin: 0 auto;
   }
   ul {
@@ -72,8 +74,6 @@ const GlobalStyle = createGlobalStyle`${css`
   .section-container {
     padding-top: 80px;
     padding-bottom: 80px;
-    width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
   }
 

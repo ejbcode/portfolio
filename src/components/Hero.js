@@ -6,13 +6,26 @@ const HeroStyle = styled.section`
   max-height: 850px;
   display: flex;
   align-items: center;
-  line-height: 4rem;
-  border: red solid 1px;
+  line-height: 2;
+  width: 90%;
+  margin: 0 auto;
 
   legend {
     font-size: 1.6rem;
     opacity: 35%;
     font-family: 'Caveat', cursive;
+  }
+
+  .react {
+    color: #6ad3f3;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0px 10px;
+    /* line-height: -20rem; */
+  }
+
+  .javascript {
+    background: #efd81e;
+    color: #111;
   }
 
   .body {
@@ -29,6 +42,11 @@ const HeroStyle = styled.section`
   h1 span {
     color: var(--colorTxt2);
   }
+  h3 {
+    font-size: 7rem;
+    font-size: clamp(3rem, -0.875rem + 8.333vw, 5.5rem);
+    line-height: 1.5;
+  }
 `;
 const Hero = () => (
   <HeroStyle>
@@ -40,7 +58,10 @@ const Hero = () => (
         <h1>
           Hey, I’m<span> Ernesto🤟🏼</span>
         </h1>
-        <h3>I´m a Frontend Developer who like to make stuff for the web</h3>
+        <h3>
+          I´m a <span className="react">React</span> Developer who like to make
+          stuff for the web
+        </h3>
         <h6> Also takes notes of what I´ve learning. </h6>
       </div>
       <legend className="body">&#60; /body &#62;</legend>
