@@ -6,6 +6,7 @@ const Content = styled.div`
   @media (min-height: 768px) {
     display: flex;
     justify-content: center;
+    border: red solid 1px;
 
     align-items: center;
     .text {

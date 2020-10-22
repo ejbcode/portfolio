@@ -7,8 +7,28 @@ const HeroStyle = styled.section`
   display: flex;
   align-items: center;
   line-height: 2;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  /* background: #208379;
+  background: linear-gradient(135deg, #208379 20%, #051514 80%); */
+  padding-top: 20px;
+  padding-bottom: 80px;
+
+  :before {
+    background-position: 50%;
+    background-size: 750px;
+    background-image: url('icon-bg.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400%;
+    width: 100%;
+    display: block;
+    z-index: 0;
+    content: '';
+    opacity: 0.1;
+    pointer-events: none;
+  }
 
   legend {
     font-size: 1.6rem;
@@ -18,7 +38,7 @@ const HeroStyle = styled.section`
 
   .react {
     color: #6ad3f3;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0);
     padding: 0px 10px;
     /* line-height: -20rem; */
   }

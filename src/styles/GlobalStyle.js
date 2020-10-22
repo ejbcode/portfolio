@@ -25,7 +25,6 @@ const GlobalStyle = createGlobalStyle`${css`
   html {
     font-size: 62.5%;
     background: var(--colorBg);
-
     /* font-family: 'Chilanka', cursive; */
     /* font-family: 'Fira Code', monospace; */
     scroll-behavior: smooth;
@@ -33,7 +32,6 @@ const GlobalStyle = createGlobalStyle`${css`
   }
 
   body {
-    /* font-family: 'Pacifico', cursive; */
     font-family: 'Open Sans', cursive;
     line-height: 1.5;
     font-size: 1.6rem;
