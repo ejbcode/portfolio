@@ -24,14 +24,13 @@ const About = () => (
         <p>
           I'm a Systems Engineer, passionate about technology, I like to resolve
           design problems, create smart user interface and imagine useful
-          interaction, developing rich web experiences & web applications. I
-          have experience with React, Redux, javascript, ES6, CSS, HTML5.
+          interaction, developing rich UX/UI interface. I have experience with
+          React, Redux, Javascript, ES6, CSS, HTML5.
         </p>
 
         <p>
-          I am a person who loves to spend time coding or learning I love
-          learning new things and staying up-to-date with the latest web
-          technologies.
+          I love learning new things and staying up-to-date with the latest web
+          technologies. Family guy and dog person.
         </p>
       </div>
       <div className="card">

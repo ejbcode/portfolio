@@ -70,6 +70,7 @@ const HeroStyle = styled.section`
   }
 
   h1 {
+    font-size: 2.5rem;
     font-size: clamp(2rem, -0.875rem + 8.333vw, 3.5rem);
   }
 
@@ -77,7 +78,7 @@ const HeroStyle = styled.section`
     color: var(--colorTxt2);
   }
   h3 {
-    font-size: 7rem;
+    font-size: 3rem;
     font-size: clamp(3rem, -0.875rem + 8.333vw, 5.5rem);
     line-height: 1.5;
   }

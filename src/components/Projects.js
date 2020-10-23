@@ -4,13 +4,48 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
-const ProjectsStyle = styled.section``;
 const ProjectStyle = styled.article`
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10rem;
   justify-content: space-between;
   align-items: center;
+
+  .text-hr {
+    margin: 4rem 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #444;
+  }
+  .text-hr__text {
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    padding: 0 15px;
+  }
+
+  .text-hr::after,
+  .text-hr::before {
+    flex: 1;
+    background: gray;
+    background: linear-gradient(
+      340deg,
+      rgba(153, 218, 255, 0) 14%,
+      rgba(153, 218, 255, 0.03) 17%,
+      rgba(0, 128, 128, 1) 100%
+    );
+    content: '';
+    height: 2px;
+    padding: 0 15px;
+  }
+  .text-hr::before {
+    background: linear-gradient(
+      340deg,
+      rgba(0, 128, 128, 1) 14%,
+      rgba(153, 218, 255, 0.03) 77%,
+      rgba(153, 218, 255, 0) 100%
+    );
+  }
+
   h3 {
     font-size: 2.8rem;
     font-weight: 400;
@@ -110,6 +145,10 @@ const Projects = ({ projects }) => {
                 <FaGithub /> Repository
               </a>
             </div>
+          </div>
+
+          <div className="text-hr">
+            <span className="text-hr__text">&#60; hr &#62;</span>
           </div>
         </ProjectStyle>
       ))}
