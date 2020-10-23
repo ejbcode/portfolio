@@ -9,7 +9,7 @@ import SEO from '../components/seo';
 const Index = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <Hero />
+    <Hero bg={data.bg} />
     <About />
     <Projects projects={data.projects} />
   </Layout>
@@ -39,6 +39,14 @@ export const query = graphql`
           }
         }
         body
+      }
+    }
+
+    bg: file(relativePath: { eq: "pattern.svg" }) {
+      childImageSharp {
+        fluid {
+          src
+        }
       }
     }
   }

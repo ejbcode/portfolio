@@ -70,12 +70,15 @@ const GlobalStyle = createGlobalStyle`${css`
   }
 
   .section-container {
-    padding-top: 80px;
+    padding-top: 20px;
     padding-bottom: 80px;
     margin: 0 auto;
+    max-width: 980px;
   }
 
   .section-title {
+    margin-bottom: 3rem;
+    font-size: 3rem;
   }
 
   .section-title:before {
@@ -118,6 +121,10 @@ const GlobalStyle = createGlobalStyle`${css`
 
   img {
     max-width: 100%;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
   }
 
   .tilt {
