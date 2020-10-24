@@ -31,7 +31,7 @@ const ProjectStyle = styled.article`
       340deg,
       rgba(153, 218, 255, 0) 14%,
       rgba(153, 218, 255, 0.03) 17%,
-      rgba(0, 128, 128, 1) 100%
+      rgba(253, 185, 39, 1) 100%
     );
     content: '';
     height: 2px;
@@ -40,10 +40,15 @@ const ProjectStyle = styled.article`
   .text-hr::before {
     background: linear-gradient(
       340deg,
-      rgba(0, 128, 128, 1) 14%,
+      rgba(253, 185, 39, 1) 14%,
       rgba(153, 218, 255, 0.03) 77%,
       rgba(153, 218, 255, 0) 100%
     );
+  }
+  :last-child {
+    .text-hr {
+      display: none;
+    }
   }
 
   h3 {

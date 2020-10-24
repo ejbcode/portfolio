@@ -11,6 +11,7 @@ const UlStyle = styled.ul`
 
   @media (max-width: 768px) {
     position: fixed;
+    z-index: 100;
     flex-flow: column nowrap;
     align-items: center;
     font-size: 3rem;

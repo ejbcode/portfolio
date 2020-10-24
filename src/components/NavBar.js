@@ -52,7 +52,6 @@ const Navbar = ({ siteTitle }) => (
   <Nav>
     <Link to="/">
       <div className="logo">
-        {' '}
         <span>&lt; </span>
         ejb<span>code /&gt;</span>
         <span className="header-module--cursor--33Aoa" />

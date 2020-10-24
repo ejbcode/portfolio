@@ -10,6 +10,19 @@ const StyledBurger = styled.div`
   right: 20px;
   z-index: 20;
   display: none;
+  .
+    .overlay {
+  background: red;
+  height: 100vh;
+  width: 100%;
+  z-index: 9;
+  position: absolute;
+  opacity: 1;
+  width: 100vh;
+  transition: opacity 0.5s;
+  position: fixed;
+}
+  }
 
   @media (max-width: 768px) {
     display: flex;
@@ -46,6 +59,7 @@ const Burger = () => {
   return (
     <>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <div className="overlay" />
         <div />
         <div />
         <div />
