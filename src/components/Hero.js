@@ -84,29 +84,26 @@ const HeroStyle = styled.section`
   }
 `;
 
-const Hero = ({ bg }) => {
-  console.log(bg);
-  return (
-    <HeroStyle>
-      <div>
-        <legend className="html">&#60; html &#62;</legend>
+const Hero = ({ bg }) => (
+  <HeroStyle>
+    <div>
+      <legend className="html">&#60; html &#62;</legend>
 
-        <legend className="body">&#60; body &#62;</legend>
-        <div className="hero-text">
-          <h1>
-            Hey, I’m<span> Ernesto🤟🏼</span>
-          </h1>
-          <h3>
-            I´m a <span className="react">React</span> Developer who like to
-            make stuff for the web
-          </h3>
-          <h6> Also takes notes of what I´ve learning. </h6>
-        </div>
-        <legend className="body">&#60; /body &#62;</legend>
-        <legend className="html"> &#60; /html &#62;</legend>
+      <legend className="body">&#60; body &#62;</legend>
+      <div className="hero-text">
+        <h1>
+          Hey, I’m<span> Ernesto🤟🏼</span>
+        </h1>
+        <h3>
+          I´m a <span className="react">React</span> Developer who like to make
+          stuff for the web
+        </h3>
+        <h6> Also takes notes of what I´ve learning. </h6>
       </div>
-    </HeroStyle>
-  );
-};
+      <legend className="body">&#60; /body &#62;</legend>
+      <legend className="html"> &#60; /html &#62;</legend>
+    </div>
+  </HeroStyle>
+);
 
 export default Hero;

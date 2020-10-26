@@ -114,51 +114,48 @@ const ProjectStyle = styled.article`
   }
 `;
 
-const Projects = ({ projects }) => {
-  console.log(projects.nodes);
-  return (
-    <div className="section-container ">
-      <h2 className="section-title">Projects</h2>
-      {projects.nodes.map((project, i) => (
-        <ProjectStyle key={i}>
-          <div className="project-item">
-            <Img fluid={project.frontmatter.image.childImageSharp.fluid} />
-          </div>
-          <div className="project-description">
-            <h3> {project.frontmatter.title}</h3>
-            <MDXRenderer>{project.body}</MDXRenderer>
+const Projects = ({ projects }) => (
+  <section id="projects" className="section-container ">
+    <h2 className="section-title">Projects</h2>
+    {projects.map((project) => (
+      <ProjectStyle key={project.id}>
+        <div className="project-item">
+          <Img fluid={project.frontmatter.image.childImageSharp.fluid} />
+        </div>
+        <div className="project-description">
+          <h3> {project.frontmatter.title}</h3>
+          <MDXRenderer>{project.body}</MDXRenderer>
 
-            <ul>
-              {project.frontmatter.techs.map((tek) => (
-                <li key={tek}>{tek}</li>
-              ))}
-            </ul>
-            <div className="project-links">
-              <a
-                href={project.frontmatter.livedemo}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaExternalLinkAlt />
-                Live Demo
-              </a>
-              <a
-                href={project.frontmatter.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub /> Repository
-              </a>
-            </div>
+          <ul>
+            {project.frontmatter.techs.map((tek) => (
+              <li key={tek}>{tek}</li>
+            ))}
+          </ul>
+          <div className="project-links">
+            <a
+              href={project.frontmatter.livedemo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaExternalLinkAlt />
+              Live Demo
+            </a>
+            <a
+              href={project.frontmatter.repo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub /> Repository
+            </a>
           </div>
+        </div>
 
-          <div className="text-hr">
-            <span className="text-hr__text">&#60; hr &#62;</span>
-          </div>
-        </ProjectStyle>
-      ))}
-    </div>
-  );
-};
+        <div className="text-hr">
+          <span className="text-hr__text">&#60; hr &#62;</span>
+        </div>
+      </ProjectStyle>
+    ))}
+  </section>
+);
 
 export default Projects;
