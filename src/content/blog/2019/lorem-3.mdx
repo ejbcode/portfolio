@@ -1,12 +1,11 @@
 ---
-date: 2020-10-24
+date: 2019-10-24
 title: "Lorem 3"
 tags: ["React", "Gatsby"]
 published: true
 image: "../../../images/blog/mockup.png"
-slug: "bruno2"
-
-excerptt: "Hereour next movie night, then dont look further than this list. Grab your popcorn, choose one of the movies and thank me later."
+slug: "bruno"
+excerptt: "Here is my personal list for the best movies of 2019. If you are planning your next movie night, then dont look further than this list. Grab your popcorn, choose one of the movies and thank me later."
 ---
 
 # Movie Night
@@ -20,10 +19,101 @@ excerptt: "Hereour next movie night, then dont look further than this list. Grab
 Gatsby-Starter-Julia uses the Atom Editor Theme.
 
 ```js
-console.log("Hello World");
+import React from "react";
+import { graphql } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+
+const ComponentName = ({ data }) => {
+  const postData = data.allMdx.nodes[0];
+  return (
+    <>
+      <MDXRenderer>{postData.body}</MDXRenderer>
+      <pre>{JSON.stringify(data, null, 4)}</pre>
+    </>
+  );
+};
+
+export default ComponentName;
 ```
 
 ## Default NodeJS server
+
+```css
+:root {
+  --colorBg: #252835;
+  --colorTxt: #fff;
+  --colorTxt2: #fdba21;
+  --colorTxt3: #ccc;
+  --red: #ff4949;
+  --black: #2e2e2e;
+  --yellow: #fdba21;
+  --white: #fff;
+  --gray: #696969;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+}
+html {
+  font-size: 62.5%;
+  background: var(--colorBg);
+  /* font-family: 'Chilanka', cursive; */
+  /* font-family: 'Fira Code', monospace; */
+  scroll-behavior: smooth;
+  color: var(--colorTxt);
+}
+
+body {
+  font-family: "Open Sans", cursive;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--colorTxt2);
+  font-size: 1.6rem;
+}
+
+fieldset {
+  border-color: rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+}
+
+button {
+  background: var(--red);
+  color: white;
+  border: 0;
+  padding: 0.6rem 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  --cast: 2px;
+  box-shadow: var(--cast) var(--cast) 0 var(--grey);
+  text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  &:hover {
+    --cast: 4px;
+  }
+}
+
+.section-container {
+  padding-top: 20px;
+  padding-bottom: 80px;
+  margin: 0 auto;
+  max-width: 980px;
+}
+```
 
 ```jsx
 const http = require('http');

@@ -17,7 +17,7 @@ const Content = styled.div`
 `;
 
 const About = () => (
-  <section className="section-container">
+  <section id="about" className="section-container">
     <h2 className="section-title">About me</h2>
     <Content>
       <div className="text">

@@ -11,7 +11,7 @@ const UlStyle = styled.ul`
 
   @media (max-width: 768px) {
     position: fixed;
-    z-index: 100;
+    z-index: 10;
     flex-flow: column nowrap;
     align-items: center;
     font-size: 3rem;
@@ -30,22 +30,32 @@ const UlStyle = styled.ul`
   }
 `;
 
-const NavLink = ({ open }) => (
+const NavLink = ({ open, setOpen }) => (
   <UlStyle open={open}>
     <li>
-      <span>01.</span> Home
+      <a href="" onClick={() => setOpen(false)}>
+        <span>01.</span> Home
+      </a>
     </li>
     <li>
-      <span>02.</span> About
+      <a href="#about" onClick={() => setOpen(false)}>
+        <span>02.</span> About
+      </a>
     </li>
     <li>
-      <span>03. </span> Projects
+      <a href="#projects" onClick={() => setOpen(false)}>
+        <span>03.</span>Projects
+      </a>
     </li>
     <li>
-      <span>04.</span> 04.Blog
+      <a href="#blog" onClick={() => setOpen(false)}>
+        <span>04.</span>Blog
+      </a>
     </li>
     <li>
-      <span>05. </span> Contact
+      <a href="#contact" onClick={() => setOpen(false)}>
+        <span>05.</span>Contact
+      </a>
     </li>
   </UlStyle>
 );

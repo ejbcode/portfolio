@@ -1,24 +1,23 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import About from '../components/About';
-import Hero from '../components/Hero';
-import LatestPost from '../components/LatestPost';
 import Layout from '../components/layout';
+import Hero from '../components/Hero';
+import About from '../components/About';
 import Projects from '../components/Projects';
+import LatestPost from '../components/LatestPost';
+import Contact from '../components/Contact';
 import SEO from '../components/seo';
 
-const Index = ({ data }) => {
-  console.log(data.posts);
-  return (
-    <Layout>
-      <SEO title="Home" />
-      <Hero bg={data.bg} />
-      <About />
-      <Projects projects={data.projects.nodes} />
-      <LatestPost posts={data.posts.nodes} />
-    </Layout>
-  );
-};
+const Index = ({ data }) => (
+  <Layout>
+    <SEO title="Home" />
+    <Hero bg={data.bg} />
+    <About />
+    <Projects projects={data.projects.nodes} />
+    <LatestPost posts={data.posts.nodes} />
+    <Contact />
+  </Layout>
+);
 
 export default Index;
 
@@ -75,7 +74,7 @@ export const query = graphql`
             text
           }
         }
-        body
+        slug
       }
     }
 

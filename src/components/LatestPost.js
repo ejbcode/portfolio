@@ -14,6 +14,7 @@ const PostsGrid = styled.div`
 `;
 
 const LatestPostsStyles = styled.article`
+  height: 100%;
   border-radius: 0.6rem 0.6rem 0 0;
   overflow: hidden;
   display: flex;
@@ -72,28 +73,30 @@ const ImgStyle = styled(Img)`
 
 const LatestPost = ({ posts }) => (
   <section id="blog" className="section-container ">
-    <h2 className="section-title">Lastest post</h2>
+    <h2 className="section-title">Recent post</h2>
     <PostsGrid>
       {posts.map((post) => (
-        <LatestPostsStyles key={post.id}>
-          <div className="image-container">
-            <ImgStyle fluid={post.frontmatter.image?.childImageSharp.fluid} />
-          </div>
-          <div className="content">
-            <h3>{post.frontmatter.title}</h3>
-            <p className="datetime">
-              {post.frontmatter.date} - {post.fields.readingTime.text}
-            </p>
-            <p className="excerpt">{post.frontmatter.excerptt}</p>
-          </div>
-          <div className="footer-post">
-            <ul>
-              {post.frontmatter.tags.map((tag) => (
-                <li key={tag}>{tag}</li>
-              ))}
-            </ul>
-          </div>
-        </LatestPostsStyles>
+        <Link to={post.slug} key={post.id}>
+          <LatestPostsStyles key={post.id}>
+            <div className="image-container">
+              <ImgStyle fluid={post.frontmatter.image?.childImageSharp.fluid} />
+            </div>
+            <div className="content">
+              <h3>{post.frontmatter.title}</h3>
+              <p className="datetime">
+                {post.frontmatter.date} - {post.fields.readingTime.text}
+              </p>
+              <p className="excerpt">{post.frontmatter.excerptt}</p>
+            </div>
+            <div className="footer-post">
+              <ul>
+                {post.frontmatter.tags.map((tag) => (
+                  <li key={tag}>{tag}</li>
+                ))}
+              </ul>
+            </div>
+          </LatestPostsStyles>
+        </Link>
       ))}
     </PostsGrid>
   </section>

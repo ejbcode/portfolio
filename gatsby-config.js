@@ -7,7 +7,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -20,6 +19,7 @@ module.exports = {
               quality: 80,
             },
           },
+          `gatsby-remark-prismjs`,
         ],
       },
     },

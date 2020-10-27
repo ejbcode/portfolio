@@ -2,7 +2,7 @@ import { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`${css`
   :root {
-    --colorBg: #252835;
+    --colorBg: #202835;
     --colorTxt: #fff;
     --colorTxt2: #fdba21;
     --colorTxt3: #ccc;
@@ -81,7 +81,7 @@ const GlobalStyle = createGlobalStyle`${css`
     font-size: 3rem;
   }
 
-  .section-title:before {
+  /* .section-title:before {
     content: '< ';
     color: var(--colorTxt2);
   }
@@ -89,7 +89,7 @@ const GlobalStyle = createGlobalStyle`${css`
   .section-title:after {
     content: ' /> ';
     color: var(--colorTxt2);
-  }
+  } */
 
   .gatsby-image-wrapper img[src*='base64\\,'] {
     image-rendering: -moz-crisp-edges;

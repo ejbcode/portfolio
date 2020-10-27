@@ -4,25 +4,25 @@ import NavLink from './NavLink';
 
 const StyledBurger = styled.div`
   width: 2rem;
+  z-index: 10;
   height: 2rem;
   position: fixed;
   top: 15px;
   right: 20px;
   z-index: 20;
   display: none;
-  .
-    .overlay {
-  background: red;
-  height: 100vh;
-  width: 100%;
-  z-index: 9;
-  position: absolute;
-  opacity: 1;
-  width: 100vh;
-  transition: opacity 0.5s;
-  position: fixed;
-}
-  }
+
+  /* .overlay {
+    background: red;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    opacity: 1;
+    width: 100vh;
+    transition: opacity 0.5s;
+    position: fixed;
+  } */
 
   @media (max-width: 768px) {
     display: flex;
@@ -62,9 +62,8 @@ const Burger = () => {
         <div className="overlay" />
         <div />
         <div />
-        <div />
       </StyledBurger>
-      <NavLink open={open} />
+      <NavLink open={open} setOpen={setOpen} />
     </>
   );
 };
