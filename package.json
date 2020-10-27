@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-ejb-potfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Ernest´s Potfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ernesto Briceño <ejbcode@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.18",
     "@mdx-js/react": "^1.6.18",

@@ -4,9 +4,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       allMdx(filter: { fileAbsolutePath: { regex: "/content/blog/" } }) {
         nodes {
           slug
-          frontmatter {
-            slug
-          }
         }
       }
     }
@@ -22,8 +19,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   postData.forEach((post) => {
     actions.createPage({
-      path: post.frontmatter.slug,
-      component: require.resolve(`./src/templates/blog-post.js`),
+      path: post.slug,
+      component: require.resolve(`./src/templates/blogpost.js`),
       context: { slug: post.slug },
     });
   });
