@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SocialIcons from './socialIcons';
 
 const UlStyle = styled.ul`
   list-style: none;
@@ -7,6 +8,16 @@ const UlStyle = styled.ul`
   flex-flow: row nowrap;
   li {
     padding: 18px 10px;
+  }
+
+  .aTag {
+    font-size: 1.6rem;
+  }
+  .show {
+    display: none;
+  }
+  span {
+    font-size: 1.3rem;
   }
 
   @media (max-width: 768px) {
@@ -27,35 +38,46 @@ const UlStyle = styled.ul`
     li {
       color: #fff;
     }
+    .show {
+      display: initial;
+    }
+    .aTag {
+      font-size: 2.6rem;
+    }
   }
 `;
 
 const NavLink = ({ open, setOpen }) => (
   <UlStyle open={open}>
     <li>
-      <a href="" onClick={() => setOpen(false)}>
-        <span>01.</span> Home
+      <a className="aTag" href="#home" onClick={() => setOpen(false)}>
+        <span>01.</span>Home
       </a>
     </li>
     <li>
-      <a href="#about" onClick={() => setOpen(false)}>
-        <span>02.</span> About
+      <a className="aTag" href="#about" onClick={() => setOpen(false)}>
+        <span>02.</span>About
       </a>
     </li>
     <li>
-      <a href="#projects" onClick={() => setOpen(false)}>
+      <a className="aTag" href="#projects" onClick={() => setOpen(false)}>
         <span>03.</span>Projects
       </a>
     </li>
     <li>
-      <a href="#blog" onClick={() => setOpen(false)}>
+      <a className="aTag" href="#blog" onClick={() => setOpen(false)}>
         <span>04.</span>Blog
       </a>
     </li>
     <li>
-      <a href="#contact" onClick={() => setOpen(false)}>
+      <a className="aTag" href="#contact" onClick={() => setOpen(false)}>
         <span>05.</span>Contact
       </a>
+    </li>
+    <li>
+      <div className="show">
+        <SocialIcons />
+      </div>
     </li>
   </UlStyle>
 );
