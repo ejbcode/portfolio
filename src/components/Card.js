@@ -53,19 +53,19 @@ const CardStyle = styled.div`
     color: #4dd0e1;
   }
   .string {
-    color: #9ccc65;
+    color: #f0d345;
   }
   .variable {
     color: #ba68c8;
   }
   .property {
-    color: #ef5350;
+    color: #65c4e0;
   }
   .method {
-    color: #29b6f6;
+    color: #65c4e0;
   }
   .function {
-    color: #fdd835;
+    color: #9ccc65;
   }
   .boolean {
     color: #4dd0e1;
@@ -117,7 +117,7 @@ const Card = () => (
           <span> &#091; </span>
           <div className="indent">
             <span className="string">
-              'HTML/CSS/JS', 'React', 'Gatsby', 'GraphQl', 'APIRest','Node.js',
+              'HTML/CSS/JS', 'React', 'Gatsby', 'GraphQl', 'APIRest', 'Node.js',
               'Redux', 'Styled-components', '@emotion', 'Bootstrap',
               'GIT/GitHub'
             </span>

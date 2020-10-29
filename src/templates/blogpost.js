@@ -23,7 +23,7 @@ const ComponentName = ({ data }) => {
   return (
     <Layout>
       <Container>
-        <p>🍟{postData.fields.readingTime.text}</p>
+        <p>⏳{postData.fields.readingTime.text}</p>
         <MDXRenderer>{postData.body}</MDXRenderer>
         <pre>{JSON.stringify(data, null, 4)}</pre>
       </Container>

@@ -78,7 +78,7 @@ export const query = graphql`
       }
     }
 
-    bg: file(relativePath: { eq: "icon-bg.jpg" }) {
+    bg: file(relativePath: { eq: "bg.png" }) {
       childImageSharp {
         fluid {
           src
