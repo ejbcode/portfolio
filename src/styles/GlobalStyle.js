@@ -22,13 +22,42 @@ const GlobalStyle = createGlobalStyle`${css`
 
   h1 {
   }
-  html {
+
+  html.light {
+    --colorBg: #aaa;
+    --colorTxt: #121212;
+    --colorTxt2: #fdba21;
+    --colorTxt3: #ccc;
+    --red: #ff4949;
+    --black: #2e2e2e;
+    --yellow: #fdba21;
+    --white: #fff;
+    --gray: #696969;
     font-size: 62.5%;
     background: var(--colorBg);
     /* font-family: 'Chilanka', cursive; */
     /* font-family: 'Fira Code', monospace; */
     scroll-behavior: smooth;
     color: var(--colorTxt);
+    transition: all 0.2s linear;
+  }
+  html {
+    --colorBg: #121212;
+    --colorTxt: #fff;
+    --colorTxt2: #fdba21;
+    --colorTxt3: #ccc;
+    --red: #ff4949;
+    --black: #2e2e2e;
+    --yellow: #fdba21;
+    --white: #fff;
+    --gray: #696969;
+    font-size: 62.5%;
+    background: var(--colorBg);
+    /* font-family: 'Chilanka', cursive; */
+    /* font-family: 'Fira Code', monospace; */
+    scroll-behavior: smooth;
+    color: var(--colorTxt);
+    transition: all 0.2s linear;
   }
 
   body {

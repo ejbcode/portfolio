@@ -13,7 +13,6 @@ const HeroStyle = styled.section`
   padding-bottom: 80px;
   /* */
   :before {
-    background: url('/static/5f32f2a5d7a41ba61776a5488727b7b6/73c85/pattern.png');
     background-position: 50%;
 
     background-image: linear-gradient(
@@ -22,7 +21,7 @@ const HeroStyle = styled.section`
         rgba(18, 18, 18, 0.03) 57%,
         rgba(18, 18, 18) 100%
       ),
-      url('/static/4e938966cb80a6f9bac52ab1f24678ca/497c6/bg.png');
+      url(${(props) => props.bg});
     position: absolute;
     top: 0;
     left: 0;
@@ -76,29 +75,26 @@ const HeroStyle = styled.section`
   }
 `;
 
-const Hero = ({ bg }) => {
-  console.log(bg);
-  return (
-    <HeroStyle>
-      <div>
-        <legend className="html">&#60; html &#62;</legend>
+const Hero = ({ bg }) => (
+  <HeroStyle bg={bg.childImageSharp.fluid.src}>
+    <div>
+      <legend className="html">&#60; html &#62;</legend>
 
-        <legend className="body">&#60; body &#62;</legend>
-        <div className="hero-text">
-          <h1>
-            Hey, I’m<span> Ernesto🤟🏼</span>
-          </h1>
-          <h3>
-            I´m a <span className="react">React</span> Developer who like to
-            make stuff for the web
-          </h3>
-          <h6> Also takes notes of what I´ve learning. </h6>
-        </div>
-        <legend className="body">&#60; /body &#62;</legend>
-        <legend className="html"> &#60; /html &#62;</legend>
+      <legend className="body">&#60; body &#62;</legend>
+      <div className="hero-text">
+        <h1>
+          Hey, I’m<span> Ernesto🤟🏼</span>
+        </h1>
+        <h3>
+          I´m a <span className="react">React</span> Developer who like to make
+          stuff for the web
+        </h3>
+        <h6> Also takes notes of what I´ve learning. </h6>
       </div>
-    </HeroStyle>
-  );
-};
+      <legend className="body">&#60; /body &#62;</legend>
+      <legend className="html"> &#60; /html &#62;</legend>
+    </div>
+  </HeroStyle>
+);
 
 export default Hero;

@@ -47,6 +47,19 @@ const Nav = styled.nav`
     }
   }
 `;
+const Button = styled.button`
+  padding: 8px 16px;
+  color: var(--colorTxt);
+  background: none;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid var(--colorTxt2);
+  cursor: pointer;
+`;
+
+const toggleTheme = () => {
+  document.documentElement.classList.toggle('light');
+};
 
 const Navbar = ({ siteTitle }) => (
   <Nav>
@@ -57,6 +70,8 @@ const Navbar = ({ siteTitle }) => (
         <span className="header-module--cursor--33Aoa" />
       </div>
     </Link>
+    {/* <Button onClick={toggleTheme}>dark</Button> */}
+
     <Burger />
   </Nav>
 );
