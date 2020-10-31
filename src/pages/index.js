@@ -58,7 +58,6 @@ export const query = graphql`
           title
           tags
           published
-          slug
           excerptt
           image {
             childImageSharp {

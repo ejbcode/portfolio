@@ -14,7 +14,14 @@ const Container = styled.div`
     margin: 0 auto;
     text-align: center;
   }
-  p {
+
+  p,
+  ul,
+  code,
+  pre {
+    margin-bottom: 1.5rem;
+  }
+  .time {
     font-size: 1.5rem;
     text-align: center;
   }
@@ -36,9 +43,9 @@ const ComponentName = ({ data }) => {
   return (
     <Layout>
       <Container>
-        <p>⏳{postData.fields.readingTime.text}</p>
+        <p className="time">⏳{postData.fields.readingTime.text}</p>
         <MDXRenderer>{postData.body}</MDXRenderer>
-        <pre>{JSON.stringify(data, null, 4)}</pre>
+        {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
       </Container>
     </Layout>
   );
