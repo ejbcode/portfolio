@@ -63,8 +63,7 @@ export const query = graphql`
           date
           tags
           published
-          slug
-          excerptt
+          excerpt
           image {
             childImageSharp {
               fluid {

@@ -1,0 +1,29 @@
+---
+date: 2020-11-05
+title: "Using setState Without an access to the state"
+tags: ["React", "Github"]
+published: true
+image: "../../../images/blog/usestate.jpg"
+excerpt: "Use setState with a callback"
+---
+
+# "Using setState Without an access to the state"
+
+When we want to update the state but without losing the current state,
+we must make a copy of the state and then update it.
+This is generally done with the spred operator.
+
+```js
+const Search = ({ keywords, setKeywords }) => {
+  setKeywords([keywords, ...key]);
+};
+```
+
+But in this example we do it without reciving the keywords by props to the component,
+using a callback
+
+```js
+const Search = ({ setKeywords }) => {
+  setKeywords((key) => [value, ...key]);
+};
+```

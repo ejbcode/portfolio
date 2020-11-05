@@ -86,7 +86,7 @@ const LatestPost = ({ posts }) => (
               <p className="datetime">
                 {post.frontmatter.date} - {post.fields.readingTime.text}
               </p>
-              <p className="excerpt">{post.frontmatter.excerptt}</p>
+              <p className="excerpt">{post.frontmatter.excerpt}</p>
             </div>
             <div className="footer-post">
               <ul>

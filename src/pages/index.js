@@ -58,7 +58,7 @@ export const query = graphql`
           title
           tags
           published
-          excerptt
+          excerpt
           image {
             childImageSharp {
               fluid(maxWidth: 500) {
