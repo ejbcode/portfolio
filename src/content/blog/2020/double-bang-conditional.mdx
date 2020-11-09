@@ -1,0 +1,44 @@
+---
+date: 2020-11-09
+title: "Double !Bang conditional"
+tags: ["React"]
+published: true
+image: "../../../images/blog/double-exclamation-mark.png"
+excerpt: "new"
+---
+
+# Double !Bang conditional
+
+TLDR;
+
+The !! (double bang) logical operators return a value’s truthy value.
+
+```js
+let data = undefined;
+
+console.log(!data); //true
+console.log(!!data); //false
+```
+
+Have you ever had problems accessing a nested object property?
+You might not know if the object or one of the sub-properties
+exists, and this can cause frustrating errors.
+
+Let’s say we wanted to access a property called data within
+state , but data is undefined until our program has successfully
+returned a fetch request. Depending on where we use it, calling
+data could prevent our app from running.
+
+```js
+fetch("https://www.breakingbadapi.com/api/quote/random")
+  .then((resp) => resp.json())
+  .then((data) => setState(data));
+//from data we want to extract the author and the quote
+const { author, quote } = data[0];
+// But this if  going to throw a error because data if undefined
+//until the request returned the promise.
+
+const { author, quote } = !!data && data[0];
+// author and quote will be false until data have a value,
+// then de variables will be the result of data[0]
+```
