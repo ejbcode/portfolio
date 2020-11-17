@@ -118,17 +118,17 @@ const ProjectStyle = styled.article`
 const Projects = ({ projects }) => (
   <section id="projects" className="section-container ">
     <h2 className="section-title">Projects</h2>
-    {projects.map((project) => (
+    {projects.map(project => (
       <ProjectStyle key={project.id}>
         <div className="project-item">
-          <Img fluid={project.frontmatter.image.childImageSharp.fluid} />
+          <Img fluid={project.frontmatter.image?.childImageSharp.fluid} />
         </div>
         <div className="project-description">
           <h3> {project.frontmatter.title}</h3>
           <MDXRenderer>{project.body}</MDXRenderer>
 
           <ul>
-            {project.frontmatter.techs.map((tek) => (
+            {project.frontmatter.techs.map(tek => (
               <li key={tek}>{tek}</li>
             ))}
           </ul>

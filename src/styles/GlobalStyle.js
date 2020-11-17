@@ -1,5 +1,10 @@
 import { createGlobalStyle, css } from 'styled-components';
 
+import caveat from '../assets/fonts/Caveat.ttf';
+import font from '../assets/fonts/frenchfries.woff';
+import openSans from '../assets/fonts/OpenSans-Regular.ttf';
+import openSansB from '../assets/fonts/OpenSans-Bold.ttf';
+
 const GlobalStyle = createGlobalStyle`${css`
   :root {
     --colorBg: #121212;
@@ -19,15 +24,30 @@ const GlobalStyle = createGlobalStyle`${css`
     margin: 0;
     padding: 0;
   }
+  @font-face {
+    font-family: FrenchFries;
+    src: url(${font});
+  }
 
-  h1 {
+  @font-face {
+    font-family: Open Sans;
+    src: url(${openSans});
+  }
+
+  @font-face {
+    font-family: Open Sans;
+    src: url(${openSansB});
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: codigo;
+    src: url(${caveat});
   }
 
   html {
     font-size: 62.5%;
     background: var(--colorBg);
-    /* font-family: 'Chilanka', cursive; */
-    /* font-family: 'Fira Code', monospace; */
     scroll-behavior: smooth;
     color: var(--colorTxt);
     transition: all 0.2s linear;

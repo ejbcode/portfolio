@@ -69,7 +69,7 @@ const FilteredPost = ({ posts, title = 'Recent Post' }) => {
     <section id="blog" className="section-container ">
       <h2 className="section-title"> {title} </h2>
       <PostsGrid>
-        {posts.map((post) => (
+        {posts.map(post => (
           <div className="blurs">
             <Link to={post.slug} key={post.id}>
               <LatestPostsStyles key={post.id}>
@@ -82,7 +82,7 @@ const FilteredPost = ({ posts, title = 'Recent Post' }) => {
                 </div>
                 <div className="footer-post">
                   <ul>
-                    {post.frontmatter.tags.map((tag) => (
+                    {post.frontmatter.tags.map(tag => (
                       <li key={tag}>{tag}</li>
                     ))}
                   </ul>
