@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`${css`
   }
 
   @font-face {
-    font-family: codigo;
+    font-family: Caveat;
     src: url(${caveat});
   }
 

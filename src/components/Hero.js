@@ -21,7 +21,7 @@ const HeroStyle = styled.section`
         rgba(18, 18, 18, 0.03) 57%,
         rgba(18, 18, 18) 100%
       ),
-      url(${(props) => props.bg});
+      url(${props => props.bg});
     position: absolute;
     top: 0;
     left: 0;
