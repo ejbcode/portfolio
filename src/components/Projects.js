@@ -3,6 +3,7 @@ import Img from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
 const ProjectStyle = styled.article`
   display: flex;
@@ -159,3 +160,7 @@ const Projects = ({ projects }) => (
 );
 
 export default Projects;
+
+Projects.propTypes = {
+  projects: PropTypes.array.isRequired,
+};

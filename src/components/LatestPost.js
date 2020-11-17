@@ -19,7 +19,7 @@ const LatestPostsStyles = styled.article`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  color: #5d5e5e;
+  color: var(--colorTxt3);
   position: relative;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
@@ -73,10 +73,10 @@ const ImgStyle = styled(Img)`
 
 const LatestPost = ({ posts }) => (
   <section id="blog" className="section-container ">
-    <h2 className="section-title">Recent post</h2>
+    <h2 className="section-title">Recent Post</h2>
     <PostsGrid>
       {posts.map((post) => (
-        <Link to={post.slug} key={post.id}>
+        <Link to={`blog/${post.slug}`} key={post.id}>
           <LatestPostsStyles key={post.id}>
             <div className="image-container">
               <ImgStyle fluid={post.frontmatter.image?.childImageSharp.fluid} />

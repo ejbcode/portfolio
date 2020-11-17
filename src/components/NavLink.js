@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import SocialIcons from './socialIcons';
 
 const UlStyle = styled.ul`
@@ -83,3 +84,8 @@ const NavLink = ({ open, setOpen }) => (
 );
 
 export default NavLink;
+
+NavLink.propTypes = {
+  open: PropTypes.string.isRequired,
+  setOpen: PropTypes.func.isRequired,
+};

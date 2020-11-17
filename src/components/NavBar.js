@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import Burger from './Burger';
 
 const Nav = styled.nav`
@@ -77,3 +78,7 @@ const Navbar = ({ siteTitle }) => (
 );
 
 export default Navbar;
+
+Navbar.propTypes = {
+  siteTitle: PropTypes.string.isRequired,
+};
