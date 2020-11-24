@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const InputStyle = styled.div`
   width: 100%;
@@ -37,9 +38,9 @@ const InputStyle = styled.div`
 `;
 
 export const InputSearch = ({ posts, setFilterData, q }) => {
-  const handleInputChange = (event) => {
+  const handleInputChange = event => {
     const search = event.target.value;
-    const dataFilter = posts.filter((post) => {
+    const dataFilter = posts.filter(post => {
       const { title, tags, excerpt } = post.frontmatter;
       return (
         title.toLowerCase().includes(search.toLowerCase()) ||
@@ -49,7 +50,6 @@ export const InputSearch = ({ posts, setFilterData, q }) => {
     });
     setFilterData(dataFilter);
   };
-
   return (
     <div>
       <InputStyle>
@@ -62,4 +62,10 @@ export const InputSearch = ({ posts, setFilterData, q }) => {
       </InputStyle>
     </div>
   );
+};
+
+InputSearch.propTypes = {
+  q: PropTypes.number.isRequired,
+  setFilterData: PropTypes.func.isRequired,
+  posts: PropTypes.array.isRequired,
 };

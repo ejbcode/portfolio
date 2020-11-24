@@ -2,7 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Layout from '../components/layout';
+import GlobalStyle from '../styles/GlobalStyle';
 
 const Container = styled.div`
   background: #1212;
@@ -41,13 +43,14 @@ const Container = styled.div`
 const ComponentName = ({ data }) => {
   const postData = data.allMdx.nodes[0];
   return (
-    <Layout>
+    <>
+      <GlobalStyle />
       <Container>
         <p className="time">⏳{postData.fields.readingTime.text}</p>
         <MDXRenderer>{postData.body}</MDXRenderer>
         {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
       </Container>
-    </Layout>
+    </>
   );
 };
 
@@ -83,3 +86,7 @@ export const query = graphql`
     }
   }
 `;
+
+ComponentName.propTypes = {
+  data: PropTypes.object.isRequired,
+};

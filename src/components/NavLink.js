@@ -86,6 +86,6 @@ const NavLink = ({ open, setOpen }) => (
 export default NavLink;
 
 NavLink.propTypes = {
-  open: PropTypes.string.isRequired,
+  open: PropTypes.bool.isRequired,
   setOpen: PropTypes.func.isRequired,
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const PostsGrid = styled.div`
   display: flex;
@@ -63,36 +64,38 @@ const LatestPostsStyles = styled.article`
   }
 `;
 
-const FilteredPost = ({ posts, title = 'Recent Post' }) => {
-  console.log(title);
-  return (
-    <section id="blog" className="section-container ">
-      <h2 className="section-title"> {title} </h2>
-      <PostsGrid>
-        {posts.map(post => (
-          <div className="blurs">
-            <Link to={post.slug} key={post.id}>
-              <LatestPostsStyles key={post.id}>
-                <div className="content">
-                  <h3>{post.frontmatter.title}</h3>
-                  <p className="datetime">
-                    {post.frontmatter.date} - {post.fields.readingTime.text}
-                  </p>
-                  <p className="excerpt">{post.frontmatter.excerpt}</p>
-                </div>
-                <div className="footer-post">
-                  <ul>
-                    {post.frontmatter.tags.map(tag => (
-                      <li key={tag}>{tag}</li>
-                    ))}
-                  </ul>
-                </div>
-              </LatestPostsStyles>
-            </Link>
-          </div>
-        ))}
-      </PostsGrid>
-    </section>
-  );
-};
+const FilteredPost = ({ posts, title = 'Recent Post' }) => (
+  <section id="blog" className="section-container ">
+    <h2 className="section-title"> {title} </h2>
+    <PostsGrid>
+      {posts.map(post => (
+        <div className="blurs" key={post.id}>
+          <Link to={post.slug} key={post.id}>
+            <LatestPostsStyles key={post.id}>
+              <div className="content">
+                <h3>{post.frontmatter.title}</h3>
+                <p className="datetime">
+                  {post.frontmatter.date} - {post.fields.readingTime.text}
+                </p>
+                <p className="excerpt">{post.frontmatter.excerpt}</p>
+              </div>
+              <div className="footer-post">
+                <ul>
+                  {post.frontmatter.tags.map(tag => (
+                    <li key={tag}>{tag}</li>
+                  ))}
+                </ul>
+              </div>
+            </LatestPostsStyles>
+          </Link>
+        </div>
+      ))}
+    </PostsGrid>
+  </section>
+);
 export default FilteredPost;
+
+FilteredPost.propTypes = {
+  title: PropTypes.string.isRequired,
+  posts: PropTypes.array.isRequired,
+};

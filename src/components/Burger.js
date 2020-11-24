@@ -12,18 +12,6 @@ const StyledBurger = styled.div`
   z-index: 20;
   display: none;
 
-  /* .overlay {
-    background: red;
-    height: 100vh;
-    width: 100%;
-    z-index: 0;
-    position: absolute;
-    opacity: 1;
-    width: 100vh;
-    transition: opacity 0.5s;
-    position: fixed;
-  } */
-
   @media (max-width: 768px) {
     display: flex;
     justify-content: space-around;

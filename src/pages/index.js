@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -86,3 +87,7 @@ export const query = graphql`
     }
   }
 `;
+
+Index.propTypes = {
+  data: PropTypes.object.isRequired,
+};

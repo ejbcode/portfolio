@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Navbar from './NavBar';
 
 const Header = ({ siteTitle }) => (
@@ -8,3 +9,7 @@ const Header = ({ siteTitle }) => (
 );
 
 export default Header;
+
+Header.propTypes = {
+  siteTitle: PropTypes.string.isRequired,
+};

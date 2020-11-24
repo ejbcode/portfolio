@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const PostsGrid = styled.div`
   display: grid;
@@ -108,3 +109,7 @@ const LatestPost = ({ posts }) => (
 );
 
 export default LatestPost;
+
+LatestPost.propTypes = {
+  posts: PropTypes.array.isRequired,
+};

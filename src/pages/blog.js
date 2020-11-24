@@ -6,13 +6,17 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import FilteredPost from '../components/FilteredPost';
 import { InputSearch } from '../components/InputSearch';
+import GlobalStyle from '../styles/GlobalStyle';
+import Navbar from '../components/NavBar';
 
 const Blog = ({ data }) => {
   const [filterData, setFilterData] = useState(data.posts.nodes);
   const posts = data.posts.nodes;
 
   return (
-    <Layout>
+    <>
+      <GlobalStyle />
+      <Navbar />
       <SEO title="Home" />
       <InputSearch
         q={filterData.length}
@@ -21,7 +25,7 @@ const Blog = ({ data }) => {
       />
       <FilteredPost posts={filterData} title="Blog" />
       {/* <pre>{JSON.stringify(data.posts.nodes, null, 4)}</pre> */}
-    </Layout>
+    </>
   );
 };
 

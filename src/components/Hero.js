@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const HeroStyle = styled.section`
   height: calc(100vh - 55px);
@@ -98,3 +99,7 @@ const Hero = ({ bg }) => (
 );
 
 export default Hero;
+
+Hero.propTypes = {
+  bg: PropTypes.object.isRequired,
+};
