@@ -50,7 +50,6 @@ const GlobalStyle = createGlobalStyle`${css`
     background: var(--colorBg);
     scroll-behavior: smooth;
     color: var(--colorTxt);
-    transition: all 0.2s linear;
   }
 
   body {

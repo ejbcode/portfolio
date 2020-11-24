@@ -4,7 +4,7 @@ import Navbar from './NavBar';
 
 const Header = ({ siteTitle }) => (
   <header id="home">
-    <Navbar siteTitle={siteTitle} />
+    <Navbar siteTitle={siteTitle} blog={false} />
   </header>
 );
 

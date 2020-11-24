@@ -2,7 +2,7 @@
 date: 2010-10-30
 title: "new"
 tags: ["React", "Github"]
-published: true
+published: false
 image: "../../../images/blog/github-pages.jpeg"
 excerpt: "new"
 ---
@@ -80,24 +80,20 @@ describe("Describe the test", () => {
 });
 ```
 
-If you add 
-``` import '@testing-library/jest-dom'; ```
- you will hace access to the autocomplete of method.
+If you add
+`import '@testing-library/jest-dom';`
+you will hace access to the autocomplete of method.
 
-
-With *jest.fn()* we can to have access to the info of a function.
+With _jest.fn()_ we can to have access to the info of a function.
 Know how many times was call., etc
 
 Yo can use beforeEach() or afterEach() to do something before og after of any test
 
 With jest.clearAllMocks() we reset any value of a previous test.
 We can use into a beforeEach()
+
 ```js
-    beforeEach( () => {
-        jest.clearAllMocks();
-    });
+beforeEach(() => {
+  jest.clearAllMocks();
+});
 ```
-
-
-
-

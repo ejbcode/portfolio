@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import NavLink from './NavLink';
+import NavLinkBlog from './NavLinkBlog';
 
 const StyledBurger = styled.div`
   width: 2rem;
@@ -41,7 +43,7 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = () => {
+const Burger = ({ blog }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -51,9 +53,17 @@ const Burger = () => {
         <div />
         <div />
       </StyledBurger>
-      <NavLink open={open} setOpen={setOpen} />
+      {!blog ? (
+        <NavLink open={open} setOpen={setOpen} />
+      ) : (
+        <NavLinkBlog open={open} setOpen={setOpen} />
+      )}
     </>
   );
 };
 
 export default Burger;
+
+Burger.propTypes = {
+  blog: PropTypes.bool.isRequired,
+};

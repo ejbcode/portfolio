@@ -49,23 +49,22 @@ const Nav = styled.nav`
   }
 `;
 
-const Navbar = ({ siteTitle }) => (
+const Navbar = ({ blog }) => (
   <Nav>
-    <Link to="/">
+    <Link to={blog ? '/blog' : '/'}>
       <div className="logo">
         <span>&lt; </span>
         ejb<span>code /&gt;</span>
         <span className="header-module--cursor--33Aoa" />
       </div>
     </Link>
-    {/* <Button onClick={toggleTheme}>dark</Button> */}
 
-    <Burger />
+    <Burger blog={blog} />
   </Nav>
 );
 
 export default Navbar;
 
 Navbar.propTypes = {
-  siteTitle: PropTypes.string.isRequired,
+  blog: PropTypes.bool,
 };

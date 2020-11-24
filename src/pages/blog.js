@@ -1,13 +1,13 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
+import PropTypes from 'prop-types';
 
 import SEO from '../components/seo';
 import FilteredPost from '../components/FilteredPost';
 import { InputSearch } from '../components/InputSearch';
 import GlobalStyle from '../styles/GlobalStyle';
 import Navbar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 const Blog = ({ data }) => {
   const [filterData, setFilterData] = useState(data.posts.nodes);
@@ -16,7 +16,7 @@ const Blog = ({ data }) => {
   return (
     <>
       <GlobalStyle />
-      <Navbar />
+      <Navbar blog />
       <SEO title="Home" />
       <InputSearch
         q={filterData.length}
@@ -24,6 +24,7 @@ const Blog = ({ data }) => {
         posts={posts}
       />
       <FilteredPost posts={filterData} title="Blog" />
+      <Footer />
       {/* <pre>{JSON.stringify(data.posts.nodes, null, 4)}</pre> */}
     </>
   );
@@ -34,7 +35,10 @@ export default Blog;
 export const query = graphql`
   {
     posts: allMdx(
-      filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/content/blog/" }
+        frontmatter: { published: { eq: true } }
+      }
 
       sort: { fields: frontmatter___date, order: DESC }
     ) {
@@ -64,3 +68,7 @@ export const query = graphql`
     }
   }
 `;
+Blog.propTypes = {
+  posts: PropTypes.array.isRequired,
+  data: PropTypes.array.isRequired,
+};

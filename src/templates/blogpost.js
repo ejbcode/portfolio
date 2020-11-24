@@ -3,8 +3,10 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Layout from '../components/layout';
+
 import GlobalStyle from '../styles/GlobalStyle';
+import Footer from '../components/Footer';
+import Navbar from '../components/NavBar';
 
 const Container = styled.div`
   background: #1212;
@@ -45,11 +47,14 @@ const ComponentName = ({ data }) => {
   return (
     <>
       <GlobalStyle />
+      <Navbar blog />
+
       <Container>
         <p className="time">⏳{postData.fields.readingTime.text}</p>
         <MDXRenderer>{postData.body}</MDXRenderer>
         {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
       </Container>
+      <Footer />
     </>
   );
 };
