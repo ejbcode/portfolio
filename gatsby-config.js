@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `ejbcode`,
-    description: `Made with GatsbyJS, Styled-Components, Deploy in Netlify.`,
+    description: `A personal Website / Blog made with GatsbyJS, Styled-Components, Deploy in Netlify.`,
     author: `@ejbcode`,
   },
   plugins: [

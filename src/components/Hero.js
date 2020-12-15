@@ -90,7 +90,7 @@ const Hero = ({ bg }) => (
           I´m a <span className="react">React</span> Developer who like to make
           stuff for the web
         </h3>
-        <h6> Also takes notes of what I´ve learning. </h6>
+        <h6> Also write post of what I´ve been learning. </h6>
       </div>
       <legend className="body">&#60; /body &#62;</legend>
       <legend className="html"> &#60; /html &#62;</legend>
