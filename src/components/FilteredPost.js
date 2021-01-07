@@ -68,6 +68,7 @@ const FilteredPost = ({ posts, title = 'Recent Post' }) => (
   <section id="blog" className="section-container ">
     <h2 className="section-title"> {title} </h2>
     <PostsGrid>
+      {posts.length < 1 && <h3>No Results</h3>}
       {posts.map(post => (
         <div className="blurs" key={post.id}>
           <Link to={post.slug} key={post.id}>

@@ -25,7 +25,11 @@ export default Index;
 export const query = graphql`
   {
     projects: allMdx(
-      filter: { fileAbsolutePath: { regex: "/content/projects/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/content/projects/" }
+        frontmatter: { show: { eq: true } }
+      }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       nodes {
         frontmatter {

@@ -1,0 +1,35 @@
+---
+date: 2020-11-30
+title: "Optional Chaining in JavaScript (.?)"
+tags: ["JavaScript", "JSX"]
+published: true
+image: "../../../images/blog/optional-chaining.jpg"
+excerpt: "The optional chaining operator (?.) introduced in JavaScript ES2020."
+---
+
+# Optional Chaining in JavaScript (.?)
+
+The optional chaining operator, was introduce in JavaScript ES2020. It`s represented by (.?) and is a safe way to access nested object properties, even if an intermediate property doesn’t exist.
+
+It`s pretty nifty way to access potentially null or undefined properties of an object, such a results from a variable trhat may not be avalable yet.
+
+```js
+const profile = {
+  user: {
+    name: "foo",
+    lastName: "bar",
+  },
+};
+
+console.log(profile.phone?.number); // undefined
+
+console.log(profile.phone.number); // Uncaught TypeError:
+```
+
+## Summary
+
+The ?. syntax has three forms:
+
+1. obj?.prop – returns obj.prop if obj exists, otherwise undefined.
+1. obj?.[prop] – returns obj[prop] if obj exists, otherwise undefined.
+1. obj?.method() – calls obj.method() if obj exists, otherwise returns undefined.
