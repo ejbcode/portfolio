@@ -126,7 +126,6 @@ const Projects = ({ projects }) => (
         <div className="project-description">
           <h3> {project.frontmatter.title}</h3>
           <MDXRenderer>{project.body}</MDXRenderer>
-
           <ul>
             {project.frontmatter.techs.map(tek => (
               <li key={tek}>{tek}</li>

@@ -5,7 +5,15 @@ module.exports = {
     author: `@ejbcode`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-instagram-all`,
+      options: {
+        access_token:
+          'IGQVJYSW40RUdEV1RzR1UwWktDSEZAiMk1QRHZAibjJ6Rnl4UDlmRHE3UkNSLUt5RGRQZAjhZAQTQzZADhfU1o0SnRTdXAwdWNmVHpnOEx4QUxKYjNOdXlWdkF0bEZALcnR1ckYtUnA5QXBNVWV6ODVQeXp6RAZDZD',
+      },
+    },
     `gatsby-plugin-react-helmet`,
+
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-mdx`,
