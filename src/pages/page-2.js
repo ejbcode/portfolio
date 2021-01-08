@@ -11,7 +11,7 @@ const SecondPage = ({ data }) => {
   useEffect(() => {
     // get data from GitHub api
     fetch(`
-    https://www.instagram.com/graphql/query/?query_hash=42323d64886122307be10013ad2dcc44&variables={"id":519208,"first":5}`)
+    https://www.instagram.com/graphql/query/?query_hash=42323d64886122307be10013ad2dcc44&variables={"id":1156562294,"first":5}`)
       .then(response => response.json()) // parse JSON from request
       .then(resultData => {
         setStarsCount(resultData.data.user.edge_owner_to_timeline_media.edges);
