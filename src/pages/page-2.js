@@ -7,15 +7,15 @@ import Image from '../components/image';
 import InstaGrid from '../components/InstaGrid';
 
 const SecondPage = ({ data }) => {
-  const [starsCount, setStarsCount] = useState([]);
+  const [instaData, setInstaData] = useState([]);
   useEffect(() => {
     // get data from GitHub api
     fetch(`
     https://www.instagram.com/graphql/query/?query_hash=42323d64886122307be10013ad2dcc44&variables={"id":1156562294,"first":5}`)
       .then(response => response.json()) // parse JSON from request
       .then(resultData => {
-        setStarsCount(resultData.data.user.edge_owner_to_timeline_media.edges);
-      }); // set data for the number of stars
+        setInstaData(resultData.data.user.edge_owner_to_timeline_media.edges);
+      });
   }, []);
   return (
     <Layout>
@@ -28,9 +28,8 @@ const SecondPage = ({ data }) => {
       </div>
       <Link to="/">Go home</Link> <br />
       <InstaGrid insta={data.insta.nodes} />
-      {/* <p>this repo have {starsCount} stars</p> */}
       <div>
-        {starsCount.map(post => {
+        {instaData.map(post => {
           console.log(post.node.edge_media_to_caption.edges[0].node.text);
           return (
             <img
@@ -40,7 +39,7 @@ const SecondPage = ({ data }) => {
           );
         })}
       </div>
-      {/* <pre>{JSON.stringify(starsCount, null, 4)}</pre> */}
+      {/* <pre>{JSON.stringify(instaData, null, 4)}</pre> */}
     </Layout>
   );
 };

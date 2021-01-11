@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const PostsGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+
   .blurs {
     width: 100%;
   }
@@ -18,27 +18,27 @@ const PostsGrid = styled.div`
 `;
 
 const LatestPostsStyles = styled.article`
-  width: 100%;
-  height: 100%;
-  border-radius: 0.6rem;
-  overflow: hidden;
   display: flex;
+  width: 96%;
+  height: 92%;
+  overflow: hidden;
+  margin-bottom: 1rem;
   flex-direction: column;
   color: var(--colorTxt3);
   position: relative;
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(255, 255, 255, 0.09);
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
   .footer-post {
     color: #141414;
-    padding: 0 0.7rem;
+    padding: 0 0.7rem 1rem 0.7rem;
   }
 
   .content {
     padding: 1.2rem;
     display: flex;
     flex-direction: column;
-    flex: 1 0 0;
+    flex: 1 0 auto;
   }
 
   .datetime {
@@ -56,7 +56,7 @@ const LatestPostsStyles = styled.article`
     display: flex;
     flex-wrap: wrap;
     li {
-      background-color: var(--colorTxt2);
+      color: var(--colorTxt2);
       padding: 2px 7px;
       margin-bottom: 8px;
       margin-right: 8px;
@@ -83,7 +83,7 @@ const FilteredPost = ({ posts, title = 'Recent Post' }) => (
               <div className="footer-post">
                 <ul>
                   {post.frontmatter.tags.map(tag => (
-                    <li key={tag}>{tag}</li>
+                    <li key={tag}>#{tag}</li>
                   ))}
                 </ul>
               </div>

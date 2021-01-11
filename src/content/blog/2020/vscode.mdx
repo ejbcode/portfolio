@@ -1,0 +1,30 @@
+---
+date: 2020-12-29
+title: "Color Customization of the title bar in VsCode"
+tags: ["VsCode"]
+published: false
+image: "../../../images/blog/vscode-style.png"
+excerpt: "Change the color of the title bar."
+---
+
+# Color Customization of the title bar in VsCode
+
+Changing the color of the title bar provides an easy way to identify your windows when there are more than two opened.
+
+To create a local customization per project, create a folder with the name of _.vscode_ in the root of your project, then create the file _settings.json_ and paste the next code:
+
+**.vscode/settings.json**
+
+```json
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#000", // The font color of the title Bar
+    "titleBar.inactiveForeground": "#000000CC",
+    "titleBar.activeBackground": "#FFC600", //The color of the title Bar
+    "titleBar.inactiveBackground": "#FFC600CC" // Color, when is inactive
+  },
+}
+
+P.D.: If you put the config in the global settings, will affect all the projects.
+
+```

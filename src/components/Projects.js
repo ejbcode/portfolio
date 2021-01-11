@@ -151,7 +151,8 @@ const Projects = ({ projects }) => (
         </div>
 
         <div className="text-hr">
-          <span className="text-hr__text">&#60; hr &#62;</span>
+          {/*eslint-disable*/}
+          <p className="text-hr__text">&#60; <span>hr</span>  &#62;</p>
         </div>
       </ProjectStyle>
     ))}

@@ -17,7 +17,7 @@ const Blog = ({ data }) => {
     <>
       <GlobalStyle />
       <Navbar blog />
-      <SEO title="Home" />
+      <SEO title="Blog Post" />
       <InputSearch
         q={filterData.length}
         setFilterData={setFilterData}
@@ -25,7 +25,6 @@ const Blog = ({ data }) => {
       />
       <FilteredPost posts={filterData} title="Blog" />
       <Footer />
-      {/* <pre>{JSON.stringify(data.posts.nodes, null, 4)}</pre> */}
     </>
   );
 };

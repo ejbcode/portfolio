@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`${css`
     --yellow: #fdba21;
     --white: #fff;
     --gray: #696969;
+    --black2: #222;
   }
   *,
   *::before,
