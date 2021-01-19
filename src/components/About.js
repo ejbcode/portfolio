@@ -25,7 +25,12 @@ const About = () => (
           I'm a Systems Engineer, passionate about technology, I like to resolve
           design problems, create smart user interface and imagine useful
           interaction, developing rich UX/UI interface. I have experience with
-          React, Redux, Javascript, ES6, CSS, HTML5.
+          React, Redux, Javascript,Firebase, ES6, CSS-in-Js, HTML5.
+        </p>
+
+        <p>
+          Fast learner, hard worker and team player, able to build projects
+          efficiently, applying critical and creative thinking.
         </p>
 
         <p>

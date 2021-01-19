@@ -117,9 +117,9 @@ const Card = () => (
           <span> &#091; </span>
           <div className="indent">
             <span className="string">
-              'HTML/CSS/JS', 'React', 'Gatsby', 'GraphQl', 'APIRest', 'Node.js',
-              'Redux', 'Styled-components', '@emotion', 'Bootstrap',
-              'GIT/GitHub'
+              'HTML/CSS/JS', 'React', 'Gatsby', 'GraphQl', 'APIRest',
+              'FireBase', 'Node.js', 'Redux', 'Styled-components', '@emotion',
+              'Bootstrap', 'GIT/GitHub'
             </span>
           </div>
           <span>&#093;</span>
