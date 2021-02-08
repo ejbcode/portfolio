@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
 import GlobalStyle from '../styles/GlobalStyle';
 import Footer from '../components/Footer';
 import Navbar from '../components/NavBar';
@@ -48,7 +47,10 @@ const ComponentName = ({ data }) => {
   return (
     <>
       <GlobalStyle />
-      <SEO title={data.allMdx.nodes[0].frontmatter.title} />
+      <SEO
+        title={data.allMdx.nodes[0].frontmatter.title}
+        description={data.allMdx.nodes[0].frontmatter.excerpt}
+      />
       {console.log(data)}
       <Navbar blog />
 

@@ -106,8 +106,8 @@ const Hero = ({ bg }) => (
           for the web
         </h3>
         <h5>
-          Also write post stuff I dont find easily on the web for further
-          reference.
+          Also write post about stuff that I dont find easily on the web for
+          further reference.
         </h5>
       </div>
       <legend className="body">&#60; /body &#62;</legend>

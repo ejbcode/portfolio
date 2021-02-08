@@ -17,7 +17,10 @@ const Blog = ({ data }) => {
     <>
       <GlobalStyle />
       <Navbar blog />
-      <SEO title="Blog" description="DESSSCCCRRIPTION" />
+      <SEO
+        title="Blog"
+        description="Post of stuff that I dont find easily on the web for further reference."
+      />
       <InputSearch
         q={filterData.length}
         setFilterData={setFilterData}
