@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import GlobalStyle from '../styles/GlobalStyle';
 import Footer from '../components/Footer';
 import Navbar from '../components/NavBar';
+import SEO from '../components/seo';
 
 const Container = styled.div`
   background: #1212;
@@ -47,6 +48,8 @@ const ComponentName = ({ data }) => {
   return (
     <>
       <GlobalStyle />
+      <SEO title={data.allMdx.nodes[0].frontmatter.title} />
+      {console.log(data)}
       <Navbar blog />
 
       <Container>

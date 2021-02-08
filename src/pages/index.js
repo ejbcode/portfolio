@@ -11,7 +11,7 @@ import SEO from '../components/seo';
 
 const Index = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Ernesto´s Website" />
     <Hero bg={data.bg} />
     <About />
     <Projects projects={data.projects.nodes} />

@@ -43,15 +43,29 @@ const HeroStyle = styled.section`
   .react {
     color: #6ad3f3;
     background: rgba(0, 0, 0);
-    padding: 0px 10px;
-    margin: 0;
-    padding-inline: 20px 40px;
-    /* line-height: -20rem; */
+    padding: 0px 15px 0 25px;
   }
 
   .javascript {
     background: #efd81e;
     color: #111;
+    padding: 0px 15px;
+    position: relative;
+    z-index: 1;
+    &:after {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      right: -10%;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: inherit;
+      -webkit-transform: skewX(-10deg);
+      -moz-transform: skewX(-10deg);
+      -ms-transform: skewX(-10deg);
+      transform: skewX(-10deg);
+    }
   }
 
   .body {
@@ -87,10 +101,14 @@ const Hero = ({ bg }) => (
           Hey, I’m<span> Ernesto🤟🏼</span>
         </h1>
         <h3>
-          I´m a <span className="react">React</span> Developer who like to make
-          stuff for the web
+          I´m a <span className="javascript">JS</span>
+          <span className="react">React</span> Developer who like to make stuff
+          for the web
         </h3>
-        <h6> Also write post of what I´ve been learning. </h6>
+        <h5>
+          Also write post stuff I dont find easily on the web for further
+          reference.
+        </h5>
       </div>
       <legend className="body">&#60; /body &#62;</legend>
       <legend className="html"> &#60; /html &#62;</legend>

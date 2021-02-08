@@ -34,6 +34,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
+      keyWords="qwerty"
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
