@@ -1,0 +1,46 @@
+---
+date: 2021-02-17
+title: "MongoDB Atlas"
+tags: ["MongoDB", "DB"]
+published: true
+image: "../../../images/blog/mongodb.jpg"
+excerpt: "Steps to create a mongoDB in the cloud with Atlas"
+---
+
+# MongoDB Atlas
+
+MongoDB Atlas is a cloud-based, open-source, NoSQL database. Atlas provides all the features of MongoDB, while automating database administration tasks such as database configuration, infrastructure provisioning, patches,
+
+- [Live Demo](https://account.mongodb.com/)
+- [Repo en github](https://github.com/ejbcode/nextjs-scratch)
+
+## Create a MongoDB Atlas account
+
+You need to have o create an account. Login or Sign Up [here](https://account.mongodb.com/), you can login with gmail or create an account with your email.
+
+Create an Organization
+
+create a project
+
+## Create a new cluster
+
+Click the Build Cluster button, select Create a Shared Cluster. (The oly free option)
+
+Leave the default settings (provider, region, cluster tier). You can change the cluster name, once your cluster is created, you won't be able to change its name. You should now see the message Your cluster is being created. New clusters take between 1-3 minutes to provision.
+
+Click on Connect button, and the you need to add a **connection ip address** and create a database user.
+
+Choose a connection method. For this case with only need the credentials, so we choose the second option **Connect your application**
+
+You should see the URI you'll use to connect to your database similar to this:  
+`mongodb+srv://<username>:<password>@<cluster-name>.mongodb.net/<db-name>?retryWrites=true&w=majority`
+
+Replace `<password>` with the password for the keystoneMongoUser user. Replace `myFirstDatabase` with the name of the database that connections will use by default. Ensure any option params are URL encoded.
+
+Copy the connection string into your application code
+Include full driver code example
+mongodb+srv://keystoneMongoUser:<password>@keystonecluster.rlmni.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+Replace <password> with the password for the keystoneMongoUser user. Replace myFirstDatabase with the name of the database that connections will use by default. Ensure any option params are URL encoded.
+
+And that's it — you now have to Add your connection string into your application code.
