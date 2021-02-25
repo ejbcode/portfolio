@@ -33,14 +33,8 @@ Click on Connect button, and the you need to add a **connection ip address** and
 Choose a connection method. For this case with only need the credentials, so we choose the second option **Connect your application**
 
 You should see the URI you'll use to connect to your database similar to this:  
-`mongodb+srv://<username>:<password>@<cluster-name>.mongodb.net/<db-name>?retryWrites=true&w=majority`
+`mongodb+srv://keystoneMongoUser:<password>@keystonecluster.rlmni.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 Replace `<password>` with the password for the keystoneMongoUser user. Replace `myFirstDatabase` with the name of the database that connections will use by default. Ensure any option params are URL encoded.
 
-Copy the connection string into your application code
-Include full driver code example
-mongodb+srv://keystoneMongoUser:<password>@keystonecluster.rlmni.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-
-Replace <password> with the password for the keystoneMongoUser user. Replace myFirstDatabase with the name of the database that connections will use by default. Ensure any option params are URL encoded.
-
-And that's it — you now have to Add your connection string into your application code.
+Copy the connection string into your application code and that's it,now you have to Add your connection string into your application code.
