@@ -27,7 +27,7 @@ const SecondPage = ({ data }) => {
         <Image />
       </div>
       <Link to="/">Go home</Link> <br />
-      <InstaGrid insta={data.insta.nodes} />
+      {/* <InstaGrid insta={data.insta.nodes} /> */}
       <div>
         {instaData.map(post => {
           console.log(post.node.edge_media_to_caption.edges[0].node.text);
@@ -46,20 +46,21 @@ const SecondPage = ({ data }) => {
 
 export default SecondPage;
 
-export const query = graphql`
-  {
-    insta: allInstagramContent(limit: 3) {
-      nodes {
-        caption
-        media_url
-        localImage {
-          childImageSharp {
-            fluid(maxHeight: 500, maxWidth: 500, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   {
+//     insta: allInstagramContent(limit: 3) {
+//       nodes {
+//         caption
+//         media_url
+//         localImage {
+//           childImageSharp {
+//             fluid(maxHeight: 500, maxWidth: 500, quality: 90) {
+//               ...GatsbyImageSharpFluid_withWebp
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
+//
