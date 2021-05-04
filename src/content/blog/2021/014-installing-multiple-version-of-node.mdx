@@ -1,0 +1,52 @@
+---
+date: 2021-05-01
+title: "Installing multiple version of Node with NVM [MacOs]"
+tags: ["Node"]
+published: true
+image: "../../../images/blog/folderstructure.jpg"
+excerpt: "Installing multiple version og Node with NVM"
+---
+
+# NVM
+
+nvm is a version manager for node.js, designed to be installed per-user, and invoked per-shell
+
+## Install & Update Script
+
+The instruccions are in this [Repo en github](https://github.com/nvm-sh/nvm#install--update-script)
+
+In the terminal, run the follow comand
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+```
+
+Restart the terminal.
+You can check if all went ok using the command nvm in the terminal
+
+## Getting Started
+
+There are several basic command in NVM
+
+```bash
+#to  get a list of all node package avaible to install
+nvm ls-remote
+
+#To get a list of the all version of node in your system
+nvm ls
+
+#To install the last version
+nvm install node
+
+#To install a specific version
+nvm install 12.16.1
+
+#To uninstall a specif version
+nvm uninstall 12.16.1
+
+#To  use a specific version of node
+nvm use 12.16.1
+
+#To use latest LTS version of node
+nvm install --lts
+```
