@@ -1,0 +1,51 @@
+---
+date: 2022-06-20
+title: "Removing properties from an object"
+tags: ["Js"]
+published: true
+image: "../../../images/blog/objects.png"
+excerpt: "Removing properties from an object"
+---
+
+# Ways to Remove a Property from an Object in Js
+
+Sometimes we need to return a object but with less properties. For the next example let´s see two approaches
+
+```JS
+const person = {
+  name:'John',
+  lastName: 'Doe',
+  gender: 'Male',
+  passport: 'A112332'
+}
+```
+
+## BlackList approach
+
+With this approach, we destructure de properties that we don´t want to return and spreed the rest to return it
+
+```JS
+const {passport, ...rest} = person;
+console.log(rest)
+// {name: "John", lastName: "Doe", gender: 'Male'}
+```
+
+## WhiteList approach
+
+Sometimes is much easier to declare what properties we need to return. We can make a function that receives the object, but filter the desired values
+
+```JS
+const exampleFilter = ({ name, lastName }) => ({ name, lastName })
+console.log(exampleFilter(person))
+// {name: "John", lastName: "Doe"}
+```
+
+## Bonus
+
+We can use lodash
+
+```JS
+const _ = require("lodash");
+console.log(_.omit(person, ['gender', 'passport']));
+// {name: "John", lastName: "Doe"}
+```
