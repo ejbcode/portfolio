@@ -1,0 +1,30 @@
+---
+date: 2022-04-20
+title: "How to generate RSA private and public keys"
+tags: ["Js"]
+published: true
+image: "../../../images/blog/rsa.jpeg"
+excerpt: "How to generate RSA private and public keys in your PC"
+---
+
+# What is RSA?
+
+_RSA_ is the most popular and widely used asymmetric encryption algorithm available to the public. It also happens to be the very first asymmetric encryption algorithm.
+
+Its name is derived from the surnames of the three mathematicians (Rivest, Shamir, and Adleman) who invented it.
+
+Type the command below and hit enter to generate the private key.
+
+```bash
+openssl genrsa -out private.pem
+```
+
+Once the above command is executed successfully, a file named "privatekey.pem" will be created on your present directory. The "2048" above specifies the private key size. You can modify it accordingly depending on your required size.
+
+Proceed to export the public key from the key pair generated using the command below
+
+```bash
+openssl rsa -in privatekey.pem -out public.pem -pubout -outform PEM
+```
+
+Another file named "publickey.pem" will be created in the directory
