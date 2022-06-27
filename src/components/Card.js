@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const CardStyle = styled.div`
   margin: 2rem auto;
@@ -108,7 +108,7 @@ const Card = () => (
         <div className="indent">
           <span className="property">title</span>
           <span className="operator">:</span>
-          <span className="string">'Frontend Developer'</span>
+          <span className="string">'JavaScript Developer'</span>
           <span>,</span>
         </div>
         <div className="indent">
@@ -117,9 +117,9 @@ const Card = () => (
           <span> &#091; </span>
           <div className="indent">
             <span className="string">
-              'HTML/CSS/JS', 'React', 'Gatsby', 'GraphQl', 'APIRest',
-              'FireBase', 'Node.js', 'Redux', 'Styled-components', '@emotion',
-              'Bootstrap', 'GIT/GitHub'
+              'React', 'Next', 'Gatsby', 'GraphQl', 'APIRest', 'AWS',
+              'FireBase', 'Node.js', 'Redux', 'Cypress', 'Jest',
+              'Styled-components', '@emotion', 'Bootstrap', 'GIT/GitHub/GitLab'
             </span>
           </div>
           <span>&#093;</span>

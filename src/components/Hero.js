@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const HeroStyle = styled.section`
   height: calc(100vh - 55px);
@@ -30,14 +30,14 @@ const HeroStyle = styled.section`
     width: 100%;
     display: block;
     z-index: -10;
-    content: '';
+    content: "";
     opacity: 0.2;
     pointer-events: none;
   }
   legend {
     font-size: 1.6rem;
     opacity: 55%;
-    font-family: 'Caveat', cursive;
+    font-family: "Caveat", cursive;
   }
 
   .react {
@@ -55,7 +55,7 @@ const HeroStyle = styled.section`
     &:after {
       position: absolute;
       z-index: -1;
-      content: '';
+      content: "";
       right: -10%;
       top: 0;
       height: 100%;
@@ -105,10 +105,7 @@ const Hero = ({ bg }) => (
           <span className="react">React</span> Developer who like to make stuff
           for the web
         </h3>
-        <h5>
-          Also write post about stuff that I dont find easily on the web for
-          further reference.
-        </h5>
+        <h5>Also write post about stuff that for further reference.</h5>
       </div>
       <legend className="body">&#60; /body &#62;</legend>
       <legend className="html"> &#60; /html &#62;</legend>
