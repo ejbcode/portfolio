@@ -1,0 +1,16 @@
+---
+date: 2023-02-10
+title: "How to add a delay in async function"
+tags: ["Js"]
+published: true
+image: "../../../images/blog/js.png"
+excerpt: "How to add a delay in async function"
+---
+
+# How to add a delay in async function?
+
+```js
+await new Promise(resolve => setTimeout(resolve, 4000)).then(() =>
+  console.log("result 🎃")
+);
+```
